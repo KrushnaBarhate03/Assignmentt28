@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 28</title>
+    <style>
+        .heading {
+            color: maroon;
+            font-size: 30px;
+        }
+
+        .button-container {
+            text-align: center;
+            height: auto;
+            width: 600px;
+            border: 2px solid maroon;
+            border-radius: 4px;
+            padding: 15px 20px;
+            margin: 100px auto;
+            
+        }
+
+        .btn {
+            margin: 10px;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color:maroon;
+            font-size: 17px;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .samsung:hover {
+            background-color:blueviolet;
+        }
+
+        .apple:hover {
+            background-color: blue;
+          
+        }
+
+        .realme:hover {
+            background-color:burlywood;
+        }
+
+        .oppo:hover {
+            background-color: greenyellow;
+            color: black;
+        }
+
+        img {
+            display: none; 
+            max-width: 300px; 
+            margin-top: 20px;
+            margin: 100px auto;
+            height: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+
+        <h4 class="heading">Click Your Favourite Mobile Brand </h4>
+        <img id="MobileBrand" src="" alt="MobileBrand">
+        <button class="btn samsung" onclick="Images('samsung')">Samsung Galaxy</button>
+        <button class="btn apple" onclick="Images('apple')">iphone</button>
+        <button class="btn realme" onclick="Images('realme')">Realme</button>
+        <button class="btn oppo" onclick="Images('oppo')">Oppo</button>
+
+    </div>
+    <script>
+
+        function Images(mobile) {
+            const img = document.getElementById('MobileBrand');
+
+            if (mobile === 'samsung'){
+                img.src = './imgs/samsung.png';
+                img.alt = 'Samsung Galaxy';
+            }else if(mobile === 'apple'){
+                img.src = './imgs/iphone.png';
+                img.alt = 'iphone';
+            }else if(mobile === 'realme'){
+                img.src = './imgs/realme.png';
+                img.alt = 'Realme';
+            }else if(mobile === 'oppo'){
+                img.src = './imgs/oppo.png';
+                img.alt = 'oppo';
+            }
+            img.style.display = 'block'; 
+
+            
+        }
+
+    </script>
+</body>
+</html>
